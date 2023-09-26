@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type Node struct {
 	data  int
 	right *Node
@@ -45,6 +47,16 @@ func (node *Node) Insert(data int) {
 	}
 }
 
+func (root *Node) Display() {
+	fmt.Printf("    %v    \n", root.data)
+	fmt.Printf("    /\\    \n")
+	fmt.Printf("   %v %v    \n", root.left.data, root.right.data)
+	fmt.Printf("  /   \n")
+	fmt.Printf(" %v   \n", root.left.left.data)
+	fmt.Printf("  \\   \n")
+	fmt.Printf("  %v   \n", root.left.left.right.data)
+}
+
 func main() {
 
 	root := CreateFirstNode(10)
@@ -54,4 +66,6 @@ func main() {
 	root.Insert(1)
 	root.Insert(3)
 	root.Insert(4)
+
+	root.Display()
 }
