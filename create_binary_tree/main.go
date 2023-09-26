@@ -55,6 +55,8 @@ func (root *Node) Display() {
 	fmt.Printf(" %v   \n", root.left.left.data)
 	fmt.Printf("  \\   \n")
 	fmt.Printf("  %v   \n", root.left.left.right.data)
+	fmt.Printf("   \\   \n")
+	fmt.Printf("    %v   \n", root.left.left.right.right.data)
 }
 
 func main() {
