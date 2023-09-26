@@ -62,7 +62,7 @@ func main() {
 	root.Insert(5)
 
 	root.Insert(3)
-	root.Insert(-999)
+	root.Insert(-999) // this will return the cursor to previous node
 	root.Insert(6)
 
 	root.Display()
